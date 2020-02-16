@@ -929,8 +929,6 @@ Wire Wire Line
 Wire Wire Line
 	3000 4200 3950 4200
 Wire Wire Line
-	3950 4200 3950 2350
-Wire Wire Line
 	3950 2350 4800 2350
 NoConn ~ 4800 2950
 NoConn ~ 4800 3050
@@ -1441,9 +1439,9 @@ Wire Wire Line
 	1350 4000 1350 4100
 Connection ~ 1350 4100
 Text Notes 8500 1250 0    50   ~ 0
-RGBWW LED strip:\nDo not mount U4, C5, R22-24
+RGBWW LED strip:\nDo not mount U4, C5, R22-R24
 Text Notes 9850 1250 0    50   ~ 0
-Addressable LED strip:\nDo not mount Q1-Q5 + resistors
+Addressable LED strip:\nDo not mount J6, Q1-Q5+resistors
 $Comp
 L Custom_components:0ZCJ0050AF2E F1
 U 1 1 5E49C5A1
@@ -1455,4 +1453,52 @@ F 3 "https://www.belfuse.com/resources/datasheets/circuitprotection/ds-cp-0zcj-s
 	1    1550 5700
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R26
+U 1 1 5E4A3523
+P 3950 3250
+F 0 "R26" H 4020 3296 50  0000 L CNN
+F 1 "22k" H 4020 3205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3880 3250 50  0001 C CNN
+F 3 "~" H 3950 3250 50  0001 C CNN
+	1    3950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R25
+U 1 1 5E4B4FEE
+P 3700 3000
+F 0 "R25" V 3493 3000 50  0000 C CNN
+F 1 "10k" V 3584 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3630 3000 50  0001 C CNN
+F 3 "~" H 3700 3000 50  0001 C CNN
+	1    3700 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E4B548C
+P 3450 3100
+F 0 "#PWR0101" H 3450 2850 50  0001 C CNN
+F 1 "GND" H 3455 2927 50  0000 C CNN
+F 2 "" H 3450 3100 50  0001 C CNN
+F 3 "" H 3450 3100 50  0001 C CNN
+	1    3450 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3100 3450 3000
+Wire Wire Line
+	3450 3000 3550 3000
+Wire Wire Line
+	3850 3000 3950 3000
+Wire Wire Line
+	3950 3000 3950 3100
+Wire Wire Line
+	3950 4200 3950 3400
+Wire Wire Line
+	3950 3000 3950 2350
+Connection ~ 3950 3000
+Text Notes 2750 2700 0    50   ~ 0
+ADC voltage divider:\nVout=3.3*10/(10+22)=1.03 V
 $EndSCHEMATC
