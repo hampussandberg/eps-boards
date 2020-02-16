@@ -481,17 +481,6 @@ F 3 "~" H 6800 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Polyfuse F1
-U 1 1 5E41C90E
-P 1550 5700
-F 0 "F1" V 1325 5700 50  0000 C CNN
-F 1 "0ZCJ0050AF2E" V 1416 5700 50  0000 C CNN
-F 2 "Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1600 5500 50  0001 L CNN
-F 3 "https://www.belfuse.com/resources/datasheets/circuitprotection/ds-cp-0zcj-series.pdf" H 1550 5700 50  0001 C CNN
-	1    1550 5700
-	-1   0    0    1   
-$EndComp
-$Comp
 L power:GND #PWR03
 U 1 1 5E4176F5
 P 1050 3050
@@ -1455,4 +1444,15 @@ Text Notes 8500 1250 0    50   ~ 0
 RGBWW LED strip:\nDo not mount U2, C4, R16-R18
 Text Notes 9850 1250 0    50   ~ 0
 Addressable LED strip:\nDo not mount Q1-Q5 + resistors
+$Comp
+L Custom_components:0ZCJ0050AF2E F1
+U 1 1 5E49C5A1
+P 1550 5700
+F 0 "F1" H 1638 5746 50  0000 L CNN
+F 1 "0ZCJ0050AF2E" H 1638 5655 50  0000 L CNN
+F 2 "Custom_components:Fuse_0ZCJ_1206" H 1600 5500 50  0001 L CNN
+F 3 "https://www.belfuse.com/resources/datasheets/circuitprotection/ds-cp-0zcj-series.pdf" H 1550 5700 50  0001 C CNN
+	1    1550 5700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
