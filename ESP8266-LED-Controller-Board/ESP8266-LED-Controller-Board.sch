@@ -1441,7 +1441,7 @@ Wire Wire Line
 	1350 4000 1350 4100
 Connection ~ 1350 4100
 Text Notes 8500 1250 0    50   ~ 0
-RGBWW LED strip:\nDo not mount U2, C4, R16-R18
+RGBWW LED strip:\nDo not mount U4, C5, R22-24
 Text Notes 9850 1250 0    50   ~ 0
 Addressable LED strip:\nDo not mount Q1-Q5 + resistors
 $Comp
