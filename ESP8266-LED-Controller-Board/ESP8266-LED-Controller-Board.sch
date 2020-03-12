@@ -1587,4 +1587,83 @@ F 3 "~" H 9450 2250 50  0001 C CNN
 	1    9450 2250
 	0    -1   -1   0   
 $EndComp
+Text Label 6050 5000 0    50   ~ 0
+I2C_SDA
+Text Label 6050 5200 0    50   ~ 0
+I2C_SCL
+$Comp
+L power:+3V3 #PWR0102
+U 1 1 5E6C0E89
+P 4950 4900
+F 0 "#PWR0102" H 4950 4750 50  0001 C CNN
+F 1 "+3V3" H 4965 5073 50  0000 C CNN
+F 2 "" H 4950 4900 50  0001 C CNN
+F 3 "" H 4950 4900 50  0001 C CNN
+	1    4950 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5E6D472B
+P 5050 5450
+F 0 "#PWR0103" H 5050 5200 50  0001 C CNN
+F 1 "GND" H 5055 5277 50  0000 C CNN
+F 2 "" H 5050 5450 50  0001 C CNN
+F 3 "" H 5050 5450 50  0001 C CNN
+	1    5050 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 5200 6050 5200
+Wire Wire Line
+	5950 5000 6050 5000
+$Comp
+L Custom_components:PCT2075GVX‎ U6
+U 1 1 5E750EBE
+P 5550 5100
+F 0 "U6" H 5550 5467 50  0000 C CNN
+F 1 "PCT2075GVX‎" H 5550 5376 50  0000 C CNN
+F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 5550 4850 50  0001 C CNN
+F 3 "https://www.nxp.com/docs/en/data-sheet/PCT2075.pdf" H 5550 5100 50  0001 C CNN
+	1    5550 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 5100 5050 5100
+Wire Wire Line
+	5050 5100 5050 5350
+Wire Wire Line
+	4950 4900 4950 4950
+Wire Wire Line
+	4950 5200 5150 5200
+Wire Wire Line
+	5150 5000 5050 5000
+Wire Wire Line
+	5050 5000 5050 5100
+Connection ~ 5050 5100
+$Comp
+L Device:C C7
+U 1 1 5E80EF42
+P 4800 5150
+F 0 "C7" V 4950 5150 50  0000 C CNN
+F 1 "100n" V 5050 5150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4838 5000 50  0001 C CNN
+F 3 "~" H 4800 5150 50  0001 C CNN
+	1    4800 5150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4800 5300 4800 5350
+Wire Wire Line
+	4800 5350 5050 5350
+Connection ~ 5050 5350
+Wire Wire Line
+	5050 5350 5050 5450
+Wire Wire Line
+	4800 5000 4800 4950
+Wire Wire Line
+	4800 4950 4950 4950
+Connection ~ 4950 4950
+Wire Wire Line
+	4950 4950 4950 5200
 $EndSCHEMATC
