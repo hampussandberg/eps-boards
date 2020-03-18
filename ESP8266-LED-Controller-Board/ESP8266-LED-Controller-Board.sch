@@ -1364,9 +1364,9 @@ Wire Wire Line
 Wire Wire Line
 	1350 4000 1350 4100
 Connection ~ 1350 4100
-Text Notes 9800 1100 0    50   ~ 0
-RGBWW LED strip:\nDo not mount U4, C5, R26-R28
-Text Notes 9800 800  0    50   ~ 0
+Text Notes 9600 1100 0    50   ~ 0
+RGBWW LED strip:\nDo not mount U4-U5, C5-C6, R26-R28
+Text Notes 9600 800  0    50   ~ 0
 Addressable LED strip:\nDo not mount J6, Q1-Q5+resistors\nR17 must be mounted
 $Comp
 L Custom_components:0ZCJ0050AF2E F1
