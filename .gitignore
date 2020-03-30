@@ -29,3 +29,4 @@ fp-info-cache
 # Other files
 *.lib
 *.dcm
+*.step
