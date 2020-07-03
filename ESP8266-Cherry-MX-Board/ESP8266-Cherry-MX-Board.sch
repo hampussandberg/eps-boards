@@ -1046,7 +1046,7 @@ L Device:R R25
 U 1 1 5E78CC02
 P 3450 3250
 F 0 "R25" V 3243 3250 50  0000 C CNN
-F 1 "100k" V 3334 3250 50  0000 C CNN
+F 1 "499k" V 3334 3250 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3380 3250 50  0001 C CNN
 F 3 "~" H 3450 3250 50  0001 C CNN
 	1    3450 3250
@@ -1057,7 +1057,7 @@ L Device:R R26
 U 1 1 5E78D316
 P 3700 3500
 F 0 "R26" H 3770 3546 50  0000 L CNN
-F 1 "499k" H 3770 3455 50  0000 L CNN
+F 1 "100k" H 3770 3455 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3630 3500 50  0001 C CNN
 F 3 "~" H 3700 3500 50  0001 C CNN
 	1    3700 3500
@@ -1649,10 +1649,6 @@ Text Label 6000 2450 0    50   ~ 0
 GPIO2
 Text Label 6000 3150 0    50   ~ 0
 GPIO15
-Wire Wire Line
-	5900 3150 6000 3150
-Wire Wire Line
-	6000 2450 5900 2450
 Text Label 4800 6950 0    50   ~ 0
 GPIO2
 Text Label 4800 7050 0    50   ~ 0
@@ -1905,4 +1901,64 @@ Text Notes 9900 1250 0    79   ~ 0
 Rotary encoder
 Text Notes 9400 3350 0    79   ~ 0
 Switches and LEDs
+Text Notes 4400 900  0    50   ~ 0
+On every boot, reset or wakeup the following pin states are needed:\n- GPIO15: LOW\n- GPIO2: HIGH\n- GPIO0: LOW for flash mode, HIGH for run mode
+$Comp
+L Device:R R28
+U 1 1 5F0B8D93
+P 6600 2200
+F 0 "R28" H 6670 2246 50  0000 L CNN
+F 1 "10k" H 6670 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6530 2200 50  0001 C CNN
+F 3 "~" H 6600 2200 50  0001 C CNN
+	1    6600 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 2450 6600 2350
+Wire Wire Line
+	5900 2450 6600 2450
+Wire Wire Line
+	6600 2050 6600 1950
+Wire Wire Line
+	6600 1950 6900 1950
+Wire Wire Line
+	6900 1950 6900 2150
+Connection ~ 6900 2150
+$Comp
+L Device:R R27
+U 1 1 5F0F41E5
+P 6150 3550
+F 0 "R27" H 6220 3596 50  0000 L CNN
+F 1 "10k" H 6220 3505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6080 3550 50  0001 C CNN
+F 3 "~" H 6150 3550 50  0001 C CNN
+	1    6150 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 5F0F46C2
+P 6150 3800
+F 0 "#PWR0120" H 6150 3550 50  0001 C CNN
+F 1 "GND" H 6155 3627 50  0000 C CNN
+F 2 "" H 6150 3800 50  0001 C CNN
+F 3 "" H 6150 3800 50  0001 C CNN
+	1    6150 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3800 6150 3700
+Wire Wire Line
+	6350 3150 6350 3300
+Wire Wire Line
+	6350 3300 6150 3300
+Wire Wire Line
+	6150 3300 6150 3400
+Wire Wire Line
+	5900 3150 6350 3150
+Text Notes 5700 5500 0    50   ~ 0
+0100001=0x21
+Text Notes 5700 5750 0    50   ~ 0
+0100000=0x20
 $EndSCHEMATC
