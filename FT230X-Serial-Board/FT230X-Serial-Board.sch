@@ -861,8 +861,8 @@ Text Notes 10550 3400 0    50   ~ 0
 VIO from external (1.8V-3.3V)\nor internal 3.3V supply
 Text Notes 9800 6900 0    50   ~ 0
 Short this jumper when in self powered config\n(i.e. when VCC is from external)
-Text Notes 12650 4500 0    50   ~ 0
-CBUS pins must be configured\nfor TX and RX LEDs to work
+Text Notes 12700 4600 0    50   ~ 0
+CBUS pins must be configured\nfor TX and RX LEDs to work\nDefault values:\n- CBUS1: RXLED\n- CBUS2: TXLED
 Wire Wire Line
 	6900 3300 6900 3200
 $Comp
@@ -872,7 +872,7 @@ P 6900 3450
 AR Path="/5EB36C87/5EE7CE60" Ref="R?"  Part="1" 
 AR Path="/5EE7CE60" Ref="R9"  Part="1" 
 F 0 "R9" V 7050 3400 50  0000 L CNN
-F 1 "270" V 6970 3405 50  0000 L CNN
+F 1 "4k7" V 6970 3405 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 6830 3450 50  0001 C CNN
 F 3 "~" H 6900 3450 50  0001 C CNN
 	1    6900 3450
@@ -915,7 +915,7 @@ P 7150 7500
 AR Path="/5EB36C87/5EE9505E" Ref="R?"  Part="1" 
 AR Path="/5EE9505E" Ref="R10"  Part="1" 
 F 0 "R10" V 7300 7450 50  0000 L CNN
-F 1 "270" V 7220 7455 50  0000 L CNN
+F 1 "4k7" V 7220 7455 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7080 7500 50  0001 C CNN
 F 3 "~" H 7150 7500 50  0001 C CNN
 	1    7150 7500
